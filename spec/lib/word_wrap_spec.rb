@@ -36,6 +36,11 @@ describe WordWrap do
         it { should == "bye\nwelk\ner"}
       end
 
+      context "with existing words" do
+        let(:string) { "a welker"}
+        it { should == "a\nwelk\ner"}
+      end
+
       context "with a few words" do
         let(:string) { "aa aa aa" }
         let(:column_length) { 5 }
